@@ -10,8 +10,8 @@ session = boto3.Session(
 s3 = session.client('s3')
 
 filename = 'file.txt'
-bucket_name = 'temp1-s3'
+bucket_name = 'temp2-s3'
 
 # Uploads the given file using a managed uploader, which will split up large
 # files automatically and upload parts in parallel.
-s3.upload_file(filename, bucket_name, filename)
+s3.upload_file( filename, bucket_name, '/Incoming/' + filename)

@@ -9,7 +9,7 @@ session = boto3.Session(
 # s3 = session.resource('s3')
 s3 = session.client('s3')
 
-filename = 'file.txt'
+filename = os.environ['FILE_NAME']
 bucket_name = 'temp2-s3'
 
 # Uploads the given file using a managed uploader, which will split up large

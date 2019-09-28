@@ -10,7 +10,7 @@ session = boto3.Session(
 s3 = session.client('s3')
 
 filename = os.environ['FILE_NAME']
-bucket_name = 'temp2-s3'
+bucket_name = os.environ['BUCKET_NAME']
 
 # Uploads the given file using a managed uploader, which will split up large
 # files automatically and upload parts in parallel.
